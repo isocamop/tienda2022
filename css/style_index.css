@@ -1,148 +1,139 @@
-body{
-	background: url(../imagen/w.jpg);
+/*-------define estilo general---------- */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #f2f2f2; 
+	font-size: 1em;
+	line-height: 1.5em;
+
+	padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+
+
+}
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
 	text-align: center;
-	color: rgb(44, 56, 78); /*#FFF000;*/
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ------define estilo de la cabezera------- */
+
+#main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+}	
+	#main-header a {
+		color: white;
 	}
 
-#logo_cole{
-	width: 275px; 
+/*
+ * Logo
+ */
+#logo-header {
 	float: left;
-} 
-
-#titulo{
-	width: 70%;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
 }
+	#logo-header:hover {
+		color: #2aea18; /* define color de logo*/
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+	
 
-#titulo h3{
-	color: orange;
-	font-family: Arial; 
-	font-weight: bold;
-} 
-
-#menu {
-	background: rgb(30, 28, 28); 
-	float: left;
-	width: 14%;
-}
-
-#login{
-	/*Iogin*/ 
-	background: rgb(61, 57, 57); 
-	width: 15%;
+/*
+ * Navegación
+ */
+nav {
 	float: right;
-} 
- 
-#menu, #titulo, #login{ 
-	display: inline-black;
-	background: url(../images/fondo.jpg);
 }
-
-#fotogrande{
-	width: 57%;
-	border-radius: 5%;
-} 
-
-nav ul {
-	list-style: none;
-	overflow: hidden; /* Limpia errores de float */
-	margin: 5px 30px auto;
-}
-
-nav ul li {
-	List-style: none; /*quita las viñetas de la Iista */ 
-	text-decoration: none;
-	text-align: right;
-	font-family: sans-serif; 
-	font-size: 12px; 
-	margin: 5px;
-	padding: 0.2em;
-}
-
-nav ul li:hover {
-	background: white;
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
 	
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #6a4ed9;
+				}
+			
+/* ------------aplicando estilo al contenido---------- */
+
+#main-content {
+	background: rgb(210, 187, 187);
+	width: 90%;
+	max-width: 2000px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
-nav ul li a {
-	display: inline-block; /*a elementos bloque */ 
-	text-decoration: none;
-	text-transform: capitalize; 
-	font-weight: bold; 
-	padding: 5px;
-	color: rgb(45, 39, 39);
-}
+	#main-content header,
+	#main-content .content {
+		padding: 40px;
+	}
 
-a:hover{
-	/* mouse cambia de color a opciones*/ 
-	color: #468bde;
-} 
+	/* -----------define estilo de pie de pagina------------*/
 
-#seccion{
-	background: rgba(255, 166, 0, 0.395); 
-	padding: 10px;
+	#main-footer {
+		background: rgb(54, 54, 146);
+		color: white;
+		text-align: center;
+		padding: 20px;
+		margin-top: 40px;
+	}
+		#main-footer p {
+			margin: 0;
+		}
+		
+		#main-footer a {
+			color: white;
+		}
 	
+/* ---------Para fijar  la cabecera -------*/
 
-}
-
-section article{
-	background: url(../images/fondo.jpg); 
-	display: block;
-	width: 80%; 
-	margin: auto; 
-	padding: 10px;
-
-}
-
-#logocima{
-	float: left;
-}	
-
-#my_foot{
-	display: inline-block; 
-	background: rgba(128, 0, 128, 0.37); 
-
-	width: 98.5%; 
-	padding: 10px;
+#main-header {
+	background: rgb(54, 54, 146);
+	color: white;
+	height: 80px;
 	
-}
-
-#tweet{
-	width: 30%;
-	
-	background: rgba(125, 3, 125, 0.45);
-	border-radius: 5%;
-
-} 
-
-#fotos{
-	width: 30%; 
-	background: rgba(125, 3, 125, 0.45);
-	border-radius: 5%;
-}
-
-#amigos{
-	width: 30%;
-	background: rgba(125, 3, 125, 0.45);
-	border-radius: 5%;
-} 
-
-
-#tweet, #fotos, #amigos{
-	display: inline-block; 
-	vertical-align: top;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
