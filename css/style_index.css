@@ -154,8 +154,8 @@ aside{
 	/* -----------define estilo de pie de pagina------------*/
 
 	#main-footer {
-		background: rgb(54, 54, 146);
-		color: white;
+		background: rgb(52, 52, 67);
+		color: rgb(182, 177, 177);
 		text-align: center;
 		padding: 20px;
 		margin-top: 40px;
@@ -175,7 +175,7 @@ aside{
 /* ---------Para fijar  la cabecera -------*/
 
 #main-header {
-	background: rgb(54, 54, 146);
+	background: rgba(54, 54, 146, 0.832);
 	color: white;
 	height: 70px;
 	
