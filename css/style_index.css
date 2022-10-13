@@ -9,7 +9,7 @@ body {
 	line-height: 1.5em;
 
 	padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
-
+	
 
 }
 h1 {
@@ -103,12 +103,12 @@ nav {
 	float: right;
 	margin: 20px;
 	color: rgb(236, 228, 228);
-	border: 0.2em solid rgb(61, 57, 57); 
+	border: 0.2em solid rgb(35, 87, 64); 
 	border-radius: 10%;
 	margin-top: 55px;
 } 
 
-#fotogrande, #login{ 
+ #login{ 
 	display: inline-block;
 	
 }
@@ -143,6 +143,14 @@ aside{
   	left: 5px;
 	  padding-top: 8px
 }
+
+/*define parafos*/
+
+.tex_2{
+	margin-left: 30px;
+}
+
+
 	/* -----------define estilo de pie de pagina------------*/
 
 	#main-footer {
@@ -160,6 +168,10 @@ aside{
 			color: white;
 		}
 	
+
+	.en_pie{
+		margin-left: 100px;
+	}
 /* ---------Para fijar  la cabecera -------*/
 
 #main-header {
