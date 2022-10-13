@@ -98,12 +98,12 @@ nav {
 
 #login{
 	/*Iogin*/ 
-	background: rgba(88, 131, 128, 0.865); 
+	background: rgba(72, 78, 75, 0.865); 
 	width: 15%;
 	float: right;
 	margin: 20px;
 	color: rgb(236, 228, 228);
-	border: 0.2em solid rgb(35, 87, 64); 
+	border: 0.2em solid rgb(72, 78, 75); 
 	border-radius: 10%;
 	margin-top: 55px;
 } 
