@@ -33,13 +33,38 @@
     <!--------------   contenido --------------->
     
     <h1>CONTACTANOS</h1>
+    <br>
         <center>
-        <img src="./imagen/marcas.jpg" id="fotogrande" />
-        </center>
-    
-        
-        
+        <form method="post" action="mensaje.php">
+            <br>
+                Nombre :<input name="nombre" type="text" id="nombre">
+               email.....:<input name="correo" type="email" id="correo">
+            </br>
+            <br>
+               celular.:<input name="celular" type="tel" id="celular">
+                Asunto.  :<input name="asunto" type="text" id="asunto">
+            </br>
+            
+            <br>
+            mensaje:
+            
+            <br>
+                <textarea rows="6" cols="60" name="mensaje">
+                    Escriba su mensaje...  
+                </textarea>
+            </br>
+            <br>
+            <input type="submit" name="Submit" value="Enviar">
+            </br>
+        </form>
+    </center>
 
+    <br><br><br><br>
+    <hr width="1200">
+    <center>
+    <img src="./imagen/marcas.jpg" id="fotogrande" />
+    </center>
+    
         
 
     <!--------------  fin del contenido --------------->
