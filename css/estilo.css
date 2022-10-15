@@ -1,12 +1,12 @@
 body{     
-	background: url(../imagen/parallax.jpg);
+	background: url(../imagen/fondo_abs.jpg);
 }      
 
 #logo{   /* logo.jpg */      
-	width: 10.5%;     
+	width: 28%;     
 	float: left;     
 	margin: 1px; 
-	border-radius: 1em;  
+	border-radius: 0.8em;  
 }
 
 header{ /* IEP CIMA*/     
