@@ -3,7 +3,7 @@
 <BODY>
 <?php
 /*Ejemplo de paginacIón*/
-echo "<div align='center'> Paginación de Resultados para Alumnos </div>"; 
+echo "<div align='center'> Paginación de Resultados para carrito de compras </div>"; 
 echo "<hr>";
 
     include("conexion.php");
