@@ -2,7 +2,8 @@
 $dbhost='localhost'; 
 $dbusername='root'; 
 $dbuserpass='12345678';
-$dbname='concurso';
+$dbname='seminario';
+$tbl_name = "inscripcion";
 $conexion=mysqli_connect($dbhost, $dbusername, $dbuserpass,$dbname);
 
 if(!$conexion)
