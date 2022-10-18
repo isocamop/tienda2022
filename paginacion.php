@@ -7,7 +7,7 @@ echo "<div align='center'> Paginación de Resultados para carrito de compras </d
 echo "<hr>";
 
     include("conexion.php");
-    $res = mysqli_query($conexion, "SELECT * FROM participante");
+    $res = mysqli_query($conexion, "SELECT * FROM orders");
     $numeroRegistros = mysqli_num_rows($res); 
     if($numeroRegistros<=0)
     {
@@ -15,7 +15,7 @@ echo "<hr>";
         echo "<font face='verdana'>No se encontraron resultados</font>"; 
         echo "</div>";
     } else {
-        $orden = "cod_part";
+        $orden = "id";
         $tamPag = 10; // tamaño de la página 10 filas
         if(!isset($_GET["pagina"])) // pagina actual si no está definida y limites
         {
@@ -47,7 +47,7 @@ echo "<hr>";
             } 
         }// fin de calculo
     // creacion de la consulta con límites
-    $sql = "SELECT * FROM participante ORDER BY ".$orden." ASC LIMIT ".$limitInf.",".$tamPag;
+    $sql = "SELECT * FROM orders ORDER BY ".$orden." ASC LIMIT ".$limitInf.",".$tamPag;
     $res = mysqli_query($conexion, $sql); 
     echo "<div align='center'>";
     echo "<font face='verdana' size='-3'>Se encontraron ".$numeroRegistros." registros "; 
@@ -55,23 +55,23 @@ echo "<hr>";
     echo "</font></div>";
     echo "<TABLE border = 0  align='center' width='70%'>"; 
     echo "<tr><td colspan='6'><hr></td></tr>"; 
-    echo "<th>Codigo    </th>";
-    echo "<th>Nombre    </th>"; 
-    echo "<th>Apellido  </th>"; 
-    echo "<th>Ver       </th>";
-    echo "<th>Eliminar  </th>"; 
-    echo "<th>Actualizar</th>";
+    echo "<th>ID    </th>";
+    echo "<th>Cliente    </th>"; 
+    echo "<th>Total  </th>"; 
+    echo "<th>Creado       </th>";
+    echo "<th>Estatus  </th>"; 
+    echo "<th>ver</th>";
     while($registro = mysqli_fetch_array($res))
     {
 ?>
     <!--tabla de resultados-->
-<tr bgcolor="   #270909   " ('<?php echo "[".$registro["cod_part"]."]".$registro["nom_part"]." - ".$registro["ape_part"]; ?>');">
-<td><?php echo $registro["cod_part"]; ?> </td>
-<td><?php echo $registro["nom_part"]; ?> </td>
-<td><?php echo $registro["ape_part"]; ?> </td>
-<TD><?php echo "<a href = VerDatos.php?cod=$registro[0] >Ver	</a>"; ?></TD>
-<TD><?php echo "<a href = Eliminar.php?cod=$registro[0] >Eliminar	</a>"; ?></TD>
-<TD><?php echo "<a href = Actualiza.php?cod=$registro[0] >Actualizar </a>"; ?></TD>
+<tr bgcolor="   #270909   " ('<?php echo "[".$registro["id"]."]".$registro["customer_id"]." - ".$registro["grand_total"]; ?>');">
+<td><?php echo $registro["id"]; ?> </td>
+<td><?php echo $registro["customer_id"]; ?> </td>
+<td><?php echo $registro["grand_total"]; ?> </td>
+<TD><?php echo $registro["created"]; ?> </td></TD>
+<TD><?php echo $registro["status"]; ?> </td></TD></TD>
+<TD><?php echo "<a href = Actualiza.php?cod=$registro[0] >ver </a>"; ?></TD>
 </tr>
     <!--fin  tabla resultados-->
 <?php
@@ -114,12 +114,7 @@ echo "</TABLE>";
     <hr>
     <TABLE border=0 cellpadding=1 >
     <TR>
-    <FORM METHOD=POST Action = Insert.php>
-    <TD><input type=submit name=Añadir value=Nuevos_registros></TD>
-    </FORM>
-    <FORM METHOD=POST Action=Buscar.php>
-    <TD><input type=submit name=buscar value=Buscador ></TD>
-    </FORM>
+    
     <FORM METHOD=POST Action=imprime.php>
     <TD><input type=submit name=buscar value=Imprimir ></TD>
     </FORM>

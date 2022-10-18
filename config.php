@@ -1,7 +1,7 @@
 <?php 
 // Common settings 
-define('CURRENCY', 'USD'); 
-define('CURRENCY_SYMBOL', '$'); 
+define('CURRENCY', 'soles'); 
+define('CURRENCY_SYMBOL', 'S/'); 
   
 // Database configuration  
 define('DB_HOST', 'localhost'); 

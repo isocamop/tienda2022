@@ -3,7 +3,7 @@ session_start();
 	$host_db = "localhost";
 	$user_db = "root";
 	$pass_db = "12345678";
-	$db_name = "concurso";
+	$db_name = "carrito2022";
 	$tbl_name = "usuario";
 	$conexion = new mysqli($host_db, $user_db, $pass_db, $db_name); 
 	
@@ -30,7 +30,7 @@ if ($password == $row['clave']) {
 	include("index1.html");
 } else {
 	echo "Nombre o Contraseña estan incorrectos.";
-	echo "<br><a href='Index.html'>Volver a Intentarlo</a>"; 
+	echo "<br><a href='index.php'>Volver a Intentarlo</a>"; 
 }
 mysqli_close($conexion);
 ?>

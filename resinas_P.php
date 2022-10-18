@@ -7,7 +7,7 @@ include_once 'Cart.class.php';
 $cart = new Cart; 
  
 // Fetch products from the database 
-$sqlQ = "SELECT * FROM products"; 
+$sqlQ = "SELECT * FROM products where  id  in(5,6,7,8) order by id"; 
 $stmt = $db->prepare($sqlQ); 
 $stmt->execute(); 
 $result = $stmt->get_result(); 

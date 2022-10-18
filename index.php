@@ -65,9 +65,9 @@ $result = $stmt->get_result();
         <h3>Acceso de  Usuarios</h3>
         
         <FORM METHOD="post" action="Acceso.php">
-        <label>Usuario :</label> <input name="username" type="text" id="username" value="jose" required>
+        <label>Usuario :</label> <input name="username" type="text" id="username" value="marisol" required>
         <br>
-        <label>su Clave:</label> <input name="password" type="password" id="password" value="poma12" required>
+        <label>su Clave:</label> <input name="password" type="password" id="password" value="mp2" required>
         <br>
         <br>
         <input type="submit" name="Submit" value="LOGIN">

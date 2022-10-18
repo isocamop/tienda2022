@@ -2,8 +2,8 @@
 $dbhost='localhost'; 
 $dbusername='root'; 
 $dbuserpass='12345678';
-$dbname='seminario';
-$tbl_name = "inscripcion";
+$dbname='carrito2022';
+$tbl_name = "usuario";
 $conexion=mysqli_connect($dbhost, $dbusername, $dbuserpass,$dbname);
 
 if(!$conexion)
