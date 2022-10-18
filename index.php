@@ -1,36 +1,67 @@
+<?php 
+// Include the database connection file 
+require_once 'dbConnect.php'; 
+ 
+// Initialize shopping cart class 
+include_once 'Cart.class.php'; 
+$cart = new Cart; 
+ 
+// Fetch products from the database 
+$sqlQ = "SELECT * FROM products"; 
+$stmt = $db->prepare($sqlQ); 
+$stmt->execute(); 
+$result = $stmt->get_result(); 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<title>IMPRESORAS-3D | TAKANATECH</title>
+<title>IMPRESORAS-3D | TAKANATECH</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style_index.css">
 
-        <link rel="stylesheet" href="css/style_index.css">
-        
+<!-- Bootstrap core CSS -->
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
-
 <body>
-	
-	<header id="main-header">
+
+<header id="main-header">
 		
-		<a id="logo-header" href="index.html">
+		<a id="logo-header" href="index_p.php">
 			<span class="site-name">TAKANATECH</span>
 			 <span class="site-desc">Tecnologia para crear ideas</span> 
 		</a> <!-- / #logo-header -->
 
 		<nav>
 			<ul>
-				<li><a href="impresoras.html">IMPRESORAS</a></li>
+				<li><a href="impresoras_P.php">IMPRESORAS</a></li>
 				<li><a href="filamentos_P.php">FILAMENTOS</a></li>
-				<li><a href="resinas.html">RESINAS</a></li>
-                <li><a href="contactos.html">CONTACTANOS</a></li>
+				<li><a href="resinas_P.php">RESINAS</a></li>
+                <li><a href="contactos_P.php">CONTACTANOS</a></li>
 			</ul>
 		</nav><!-- / nav -->
         <a title="Carrito" href="carrito.php"><img src="imagen/carrito.png" alt="Carrito" width=84 /></a>
         <!-- <img src="imagen/índice.jpg" width=80 alt=""/> -->
-	</header><!-- / #main-header -->
+</header><!-- / #main-header -->
 
-    <!--------------   contenido --------------->
-    <aside id="login">
+    <a title="wasa" href="whatsapp.html"><img src="imagen/logo-wasap.png" width=150 alt="wasa" id="logo-wasa"/></a>
+
+<!--------------   contenido para el carrito --------------->
+
+
+<div class="container">
+
+    <!-- Cart basket -->
+    <div class="cart-view">
+        <a href="viewCart.php" title="View Cart"><i class="icart"></i> (<?php echo ($cart->total_items() > 0)?$cart->total_items().' Productos':0; ?>)</a>
+    </div>
+    
+</div>
+
+
+<!--------------  fin del contenido --------------->
+
+<aside id="login">
         <h3>Acceso de  Usuarios</h3>
         
         <FORM METHOD="post" action="Acceso.php">
@@ -156,13 +187,13 @@
         <br>
         <h1>LOS MEJORES MARCAS</h1>
         <center>
-        <img src="./imagen/marcas.jpg" id="fotogrande" />
+        <img src="./imagen/marcas.jpg" id="" />
         </center>
         
 
-    <!--------------  fin del contenido --------------->
+<!--------------  fin del contenido --------------->
 
-	<br>
+<br>
 	<br>
 	<footer id="main-footer">
 		<p>&copy; 2022 <a > TAKANATECH </a></p>
@@ -175,7 +206,7 @@
                
             </tr>
             <tr>
-                <td align="left"><li><a href="#"> isocmop@gmail.com </a></li></td>
+                <td align="left"><li><a href="#"> isocamop@gmail.com </a></li></td>
                
             </tr>
             <tr>
@@ -187,6 +218,6 @@
         </table>
 	</footer> <!-- / #main-footer -->
 
-	
+
 </body>
 </html>

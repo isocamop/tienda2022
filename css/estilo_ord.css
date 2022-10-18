@@ -1,0 +1,67 @@
+body{
+    background-color:  #FFC300
+    ;
+    color:#5a5959;
+}
+
+h1{
+    margin-left: 480px;
+}
+
+
+
+
+/* estilo de ordenSuccess.php */
+
+.ord-addr-info {
+    
+    
+    margin: 60px;
+    margin-top:  20px;
+    background-color: orange;
+    border: 0.6em orange solid;
+    border-radius: 10px;
+     box-shadow: 5px 5px 10px;
+}
+
+
+.alert-success{
+    margin-left:  60px;
+    margin-right:   60px;
+    border-radius: 10px;
+    border: 2em  #b0cc52 solid;
+    background-color:   #b0cc52;
+    opacity: 0.9;
+    box-shadow: 5px 5px 10px;
+    
+    
+}
+    
+.btn-primary_f{
+    margin: 40px;
+    background-color: orange;
+    border: 0.4em orange solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px;
+}
+
+.btn-primary_f:hover{
+    background-color: red;
+    border: 0.4em red solid;
+    
+    box-shadow: 2px 2px 2px;
+}
+
+
+.table  {
+    margin: 30px;
+    margin-left: 60px;
+    margin-right:  60px;
+    box-shadow: 3px 3px 2px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+thead{
+    text-align:  left;
+}

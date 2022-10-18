@@ -1,0 +1,98 @@
+body{
+    background-color:  #FFC300
+    ;
+    color:#5a5959;
+}
+
+h1{
+    margin-left: 480px;
+}
+
+.espacio{
+    background-color:  #ebb609 ;
+    border: 1px solid;
+    border: #ebb609 1px solid;
+}
+
+img{
+    border-radius: 10px;
+    
+    max-height: 100px;
+}
+
+table{
+    border-collapse: collapse;
+   
+ }
+
+ .form-control{
+    width: 3em;
+}
+
+/*estilo de  boton de remover */
+.btn-danger{
+    width: 250px;
+    height: 60px;
+    background: url(../images/removeG.png);
+    border: none;
+     background-size:cover;
+     background-position:center;
+    /*background-repeat:no-repeat;	 */
+}
+
+.btn-danger:hover{
+    width: 250px;
+    height: 60px;
+    background: url(../images/removeR.png);
+    border: none;
+     background-size:cover;
+     background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+
+.table {
+   
+    margin-left: 50px;
+    margin-right:  50px;
+}
+
+thead{
+    text-align:  left;
+}
+
+.btn-primary {
+    
+    background-color: orange;
+    border: 0.3em solid orange;
+   border-radius: 10px;
+
+   position: relative;
+   left:  1200px;
+   top: -20px;
+  
+   
+}
+.btn-primary:hover{
+    background-color: red;
+    border: 0.3em solid red;
+   border-radius: 10px;
+}
+
+.btn-secondary{
+    background-color: orange;
+    border: 0.3em solid orange;
+   border-radius: 10px;
+   margin-left: 20px;
+}
+
+.btn-secondary:hover{
+    background-color: red;
+    border: 0.3em solid red;
+   border-radius: 10px;
+}
+
+
+
+

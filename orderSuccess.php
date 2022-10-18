@@ -25,34 +25,34 @@ if($result->num_rows > 0){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Order Status - PHP Shopping Cart</title>
+<title>TAKANATECH-3D|Order-pedido|</title>
 <meta charset="utf-8">
 
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom style -->
-<link href="css/style.css" rel="stylesheet">
+<link href="css/estilo_ord.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <h1>ORDER STATUS</h1>
+    <h1>ESTADO DEL PEDIDO</h1>
     <div class="col-12">
         <?php if(!empty($orderInfo)){ ?>
             <div class="col-md-12">
-                <div class="alert alert-success">Your order has been placed successfully.</div>
+                <div class="alert alert-success">Tu pedido ha sido realizado con éxito.</div>
             </div>
 			
             <!-- Order status & shipping info -->
             <div class="row col-lg-12 ord-addr-info">
-                <div class="hdr">Order Info</div>
-                <p><b>Reference ID:</b> #<?php echo $orderInfo['id']; ?></p>
+                <div class="hdr">Informacion de la orden</div>
+                <p><b>Referencia ID:</b> #<?php echo $orderInfo['id']; ?></p>
                 <p><b>Total:</b> <?php echo CURRENCY_SYMBOL.$orderInfo['grand_total'].' '.CURRENCY; ?></p>
-                <p><b>Placed On:</b> <?php echo $orderInfo['created']; ?></p>
-                <p><b>Buyer Name:</b> <?php echo $orderInfo['first_name'].' '.$orderInfo['last_name']; ?></p>
+                <p><b>Colocado en:</b> <?php echo $orderInfo['created']; ?></p>
+                <p><b>Comprador:</b> <?php echo $orderInfo['first_name'].' '.$orderInfo['last_name']; ?></p>
                 <p><b>Email:</b> <?php echo $orderInfo['email']; ?></p>
-                <p><b>Phone:</b> <?php echo $orderInfo['phone']; ?></p>
-                <p><b>Address:</b> <?php echo $orderInfo['address']; ?></p>
+                <p><b>Telefono:</b> <?php echo $orderInfo['phone']; ?></p>
+                <p><b>Direccion:</b> <?php echo $orderInfo['address']; ?></p>
             </div>
 			
             <!-- Order items -->
@@ -61,9 +61,9 @@ if($result->num_rows > 0){
                     <thead>
                         <tr>
                             <th width="10%"></th>
-                            <th width="45%">Product</th>
-                            <th width="15%">Price</th>
-                            <th width="10%">QTY</th>
+                            <th width="45%">Producto</th>
+                            <th width="15%">Precio</th>
+                            <th width="10%">Cantidad</th>
                             <th width="20%">Sub Total</th>
                             </tr>
                         </thead>
@@ -99,13 +99,13 @@ if($result->num_rows > 0){
             <div class="col mb-2">
                 <div class="row">
                     <div class="col-sm-12  col-md-6">
-                        <a href="index.php" class="btn btn-block btn-primary"><i class="ialeft"></i>Continue Shopping</a>
+                        <a href="index.php" class="btn btn-block btn-primary_f"><i class="ialeft"></i>Seguir Comprando</a>
                     </div>
                 </div>
             </div>
         <?php }else{ ?>
         <div class="col-md-12">
-            <div class="alert alert-danger">Your order submission failed!</div>
+            <div class="alert alert-danger">El envío de su pedido falló!</div>
         </div>
         <?php } ?>
     </div>

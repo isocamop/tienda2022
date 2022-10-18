@@ -27,18 +27,18 @@ if(!empty($sessData['status']['msg'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Checkout - PHP Shopping Cart Tutorial</title>
+<title>TAKANATECH-3D|Verificacion|</title>
 <meta charset="utf-8">
 
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom style -->
-<link href="css/style.css" rel="stylesheet">
+<link href="css/estilo_Ch.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <h1>CHECKOUT</h1>
+    <h1>VERIFICACION</h1>
     <div class="col-12">
         <div class="checkout">
             <div class="row">
@@ -54,7 +54,7 @@ if(!empty($sessData['status']['msg'])){
 				
                 <div class="col-md-4 order-md-2 mb-4">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-muted">Your Cart</span>
+                        <span class="text-muted">Tu carrito</span>
                         <span class="badge badge-secondary badge-pill"><?php echo $cart->total_items(); ?></span>
                     </h4>
                     <ul class="list-group mb-3">
@@ -77,35 +77,35 @@ if(!empty($sessData['status']['msg'])){
                             <strong><?php echo CURRENCY_SYMBOL.$cart->total(); ?></strong>
                         </li>
                     </ul>
-                    <a href="index.php" class="btn btn-sm btn-info">+ add items</a>
+                    <a href="index.php" class="btn btn-sm btn-info">+ Agregar mas productos</a>
                 </div>
                 <div class="col-md-8 order-md-1">
-                    <h4 class="mb-3">Contact Details</h4>
+                    <h4 class="mb-3">Detalles de contacto</h4>
                     <form method="post" action="cartAction.php">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="first_name">First Name</label>
+                                <label for="first_name">Primer nombre</label>
                                 <input type="text" class="form-control" name="first_name" value="<?php echo !empty($postData['first_name'])?$postData['first_name']:''; ?>" required>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="last_name">Last Name</label>
+                            <div class="col-md-6 mb-4">
+                                <label for="last_name">Apellidos</label>
                                 <input type="text" class="form-control" name="last_name" value="<?php echo !empty($postData['last_name'])?$postData['last_name']:''; ?>" required>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-5">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" value="<?php echo !empty($postData['email'])?$postData['email']:''; ?>" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="phone">Phone</label>
+                        <div class="mb-6">
+                            <label for="phone">Telefono</label>
                             <input type="text" class="form-control" name="phone" value="<?php echo !empty($postData['phone'])?$postData['phone']:''; ?>" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="last_name">Address</label>
+                        <div class="mb-7">
+                            <label for="last_name">Direccion</label>
                             <input type="text" class="form-control" name="address" value="<?php echo !empty($postData['address'])?$postData['address']:''; ?>" required>
                         </div>
                         <input type="hidden" name="action" value="placeOrder"/>
-                        <input class="btn btn-success btn-block" type="submit" name="checkoutSubmit" value="Place Order">
+                        <input class="btn btn-success btn-block" type="submit" name="checkoutSubmit" value="Realizar Pedido">
                     </form>
                 </div>
             </div>

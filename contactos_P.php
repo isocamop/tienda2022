@@ -46,39 +46,56 @@ $result = $stmt->get_result();
 
     <a title="wasa" href="whatsapp.html"><img src="imagen/logo-wasap.png" width=150 alt="wasa" id="logo-wasa"/></a>
 
-<!--------------   contenido --------------->
+<!--------------   contenido  del carrito--------------->
 
 
 <div class="container">
-    <br><br>
-    <h1>FILAMENTOS 3D PLA</h1>
+ 
 	
     <!-- Cart basket -->
     <div class="cart-view">
         <a href="viewCart.php" title="View Cart"><i class="icart"></i> (<?php echo ($cart->total_items() > 0)?$cart->total_items().' Productos':0; ?>)</a>
     </div>
     
-    <!-- Product list -->
-    <div class="row col-lg-12">
-    <?php 
-    if($result->num_rows > 0){ 
-        while($row = $result->fetch_assoc()){ 
-            $proImg = !empty($row["image"])?'images/products/'.$row["image"]:'images/demo-img.png'; 
-    ?>
-        <div class="card" style="width: 18rem;">
-            <img src="<?php echo $proImg; ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"><?php echo $row["name"]; ?></h5>
-                <h6 class="card-subtitle mb-2 text-muted">Precio: <?php echo CURRENCY_SYMBOL.$row["price"].' '.CURRENCY; ?></h6>
-                <p class="card-text"><?php echo $row["description"]; ?></p>
-                <a href="cartAction.php?action=addToCart&id=<?php echo $row["id"]; ?>" class="btn btn-primary">AGREGAR AL CARRITO</a>
-            </div>
-        </div>
-    <?php } }else{ ?>
-        <p>Product(s) not found.....</p>
-    <?php } ?>
-    </div>
 </div>
+
+<!--------------  inicio contenido --------------->
+
+
+<h1>CONTACTANOS</h1>
+    <br>
+        <center>
+        <form method="post" action="mensaje.php">
+            <br>
+                Nombre :<input name="nombre" type="text" id="nombre">
+               email.....:<input name="correo" type="email" id="correo">
+            </br>
+            <br>
+               celular.:<input name="celular" type="tel" id="celular">
+                Asunto.  :<input name="asunto" type="text" id="asunto">
+            </br>
+            
+            <br>
+            mensaje:
+            
+            <br>
+                <textarea rows="6" cols="60" name="mensaje">
+                    Escriba su mensaje...  
+                </textarea>
+            </br>
+            <br>
+            <input type="submit" name="Submit" value="Enviar">
+            </br>
+        </form>
+    </center>
+
+    <br><br><br><br>
+    <hr width="1200">
+    <center>
+    <img src="./imagen/marcas.jpg" id="" />
+    </center>
+    
+
 
 <!--------------  fin del contenido --------------->
 

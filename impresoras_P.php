@@ -51,7 +51,7 @@ $result = $stmt->get_result();
 
 <div class="container">
     <br><br>
-    <h1>FILAMENTOS 3D PLA</h1>
+    <h1>IMPRESORAS 3D - GRADO TALLER</h1>
 	
     <!-- Cart basket -->
     <div class="cart-view">
