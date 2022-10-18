@@ -96,6 +96,14 @@ if($result->num_rows > 0){
                 </table>
             </div>
             
+            <div class="impre-2">
+                <div >
+                    <div >
+                        <a href="imprimeOrd.php" class="btn btn-block btn-primary_f"><i class="ialeft"></i>Imprimir</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="col mb-2">
                 <div class="row">
                     <div class="col-sm-12  col-md-6">
