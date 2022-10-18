@@ -72,7 +72,7 @@ $pdf->SetFont('times','',12);
 $pdf->Cell(183,15,"Tacna, 21 de octubre del 2022",'',0,'R');
 $pdf->Ln(35);
 $pdf->Image('imagen/QR.jpg',50,165,35); $pdf->Image('imagen/firma_dir.jpg',130,175,30); //('imagen', x,y,ancho)//('imagen', x,y,ancho)
- $pdf->Image('imagen/sello_dir.jpg',100,155,30);
+ $pdf->Image('imagen/sello_dir.jpg',100,185,30);
  $pdf->Cell(80,10,"    ",'',0,'C'); $pdf->Cell(30,10,"    ",'',0,'C'); $pdf->Cell(50,10,"DIRECTOR",'T',0,'C');
  $pdf->Ln(5);
  $pdf->Cell(70,10,"    ",'',0,'C');  $pdf->Cell(30,10,"     ",'',0,'C'); $pdf->Cell(70,10,"Firma y Sello",'',0,'C');

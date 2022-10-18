@@ -40,7 +40,7 @@ $result = $stmt->get_result();
                 <li><a href="contactos_P.php">CONTACTANOS</a></li>
 			</ul>
 		</nav><!-- / nav -->
-        <a title="Carrito" href="carrito.php"><img src="imagen/carrito.png" alt="Carrito" width=84 /></a>
+        <a title="Carrito" href="#"><img src="imagen/carrito.png" alt="Carrito" width=84 /></a>
         <!-- <img src="imagen/índice.jpg" width=80 alt=""/> -->
 </header><!-- / #main-header -->
 
